@@ -1,17 +1,19 @@
 import CartWidget from "../CartWidget/CartWidget"
-import Button from "../Button/Button"
 import "./Navbar.css"
+import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
   return (
     <> 
-      <nav className="navbar navbar-light bg-light navbar-expand-lg d-flex justify-content-between px-3">
-        <div><a href="./index.html" className="navbar-brand fw-bold"><img src="./images/laptop-code-solid.svg" alt="Brand logo" width="30" height="24" className="d-inline-block align-text-center "/> OpelTech</a></div>
-        <div className="btn-group">
-          <Button title="Home"/>
-          <Button title="Equipos"/>
-          <Button title="Componentes internos"/>
-          <Button title="Periféricos"/>
+      <nav className="navbar navbar-light bg-light navbar-expand-lg d-flex px-3">
+        <div className="navbar-brand fw-bold">
+          <NavLink to="/" className="nav-link"><img src="../images/laptop-code-solid.svg" alt="Brand logo" width="30" height="24" className="d-inline-block align-text-center "/> OpelTech</NavLink>
+        </div>
+        <div className="container d-flex justify-content-around bg-light">
+          <NavLink to="/" className={({isActive}) => isActive ? "nav-link active nav-item" : "nav-link nav-item"}>Home</NavLink>
+          <NavLink to="/category/equipos" className={({isActive}) => isActive ? "nav-link active nav-item" : "nav-link nav-item"}>Equipos</NavLink>
+          <NavLink to="/category/componentesInternos" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Componentes internos</NavLink>
+          <NavLink to="/category/perifericos" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>Periféricos</NavLink>
         </div>
         <CartWidget/>
       </nav>
