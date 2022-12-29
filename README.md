@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# OpelSports
+## Proyecto final del Curso de ReactJS de CH
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto creado utilizando React. Se trata de una App de un E-Commerce de una tienda de hardware. 
 
-## Available Scripts
+## Paquetes/librerías utilizados 
 
-In the project directory, you can run:
+- Se incorporó Bootstrap para estilar los componentes de la App
+- Se utilizó React-Toastify para la mejor experiencia de usuario con las notificaciones
 
-### `npm start`
+## Navegación por la App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Al ingresar a la App se despliega el Home ("/") que muestra los productos disponibles en la base de datos (Firestore) en forma general.
+- A través del Navbar se puede acceder al Home antedicho, a las categorías de productos y al Carrito de compras.
+- "/category/equipos", "/category/componentesInternos" y "/category/perifericos" son las 3 rutas que muestran los productos filtrados por categoría.
+- "/cart" muestra el carrito de compras con un mínimo de detalle de cada producto y la capacidad de borrarlos individual o totalmente. A su vez se puede acceder al checkout ("/checkout") a través del botón "Finalizar compra"
+- En el main de Home y las vistas por categoría se puede en cada producto visualizar su imagen, nombre, precio y la posibilidad de acceder al detalle de cada uno en particular con la ruta "/item/:itemId".
+- En la vista del detalle del item se puede observar además de lo anterior una descripción exhaustiva de cada producto, botones para la cantidad a incorporar al carrito y para agregarlo al mismo. De apretarse este último botón se puede acceder a al checkout.
+- En el checkout ("/checkout") se expone nuevamente la lista de los productos en el carrito y un formulario para completar los datos del comprador. Retorna notificaciones positivas o de error en el caso que se genere o no la orden de compra.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Corriendo la App de forma local
+En la GIT Bash insertar los siguientes comandos:
+```
+$ git clone https://github.com/diegoOpel/TrabajoFinalReactOpel.git
+$ cd TrabajoFinalReactOpel
+$ npm install
+$ npm start
+```
 
-### `npm test`
+## Variables de Entorno
+Se provee al usuario de este repositorio de un archivo de ejemplo con las variables a utilizar para correr la base de datos. Vea [.env.example] 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Autor del proyecto
+Diego Opel

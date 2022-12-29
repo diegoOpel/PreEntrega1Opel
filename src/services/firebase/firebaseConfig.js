@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDwnZGMwoGoxFMeA_WGPcgmtwKPj56EfvI",
-  authDomain: "opelsports.firebaseapp.com",
-  projectId: "opelsports",
-  storageBucket: "opelsports.appspot.com",
-  messagingSenderId: "837493868788",
-  appId: "1:837493868788:web:ea44adb75ea0c9bf9436a1"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 const app = initializeApp(firebaseConfig);

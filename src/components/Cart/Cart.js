@@ -3,6 +3,7 @@ import { useContext } from "react"
 import CartItem from "../CartItem/CartItem"
 import { Link } from "react-router-dom"
 
+
 const Cart = () => {
   const {cart, clear, getTotal} = useContext(CartContext)
 
@@ -16,8 +17,10 @@ const Cart = () => {
       {getTotal() ? 
       <>
         <h3>Total: ${getTotal()}</h3> 
-        <button onClick={()=>clear()} className="btn btn-danger m-3 fw-bold">Vaciar Carrito</button>
-        <Link to="/checkout" className="btn btn-success m-3 fw-bold">Finalizar orden</Link>
+        <div className="container d-flex row justify-content-evenly">
+          <Link to="/checkout" className="btn btn-success m-3 fw-bold col-4">Finalizar orden</Link>
+          <button onClick={()=>clear()} className="btn btn-danger m-3 fw-bold col-3">Vaciar Carrito</button>
+        </div>
       </>
       : <h3 className="pt-3">No hay productos cargados en el carrito aún</h3>}
     </section>
