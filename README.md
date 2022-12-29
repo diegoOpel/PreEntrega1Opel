@@ -28,8 +28,7 @@ $ npm start
 ```
 
 ## Variables de Entorno
-Se provee al usuario de este repositorio de un archivo de ejemplo con las variables a utilizar para correr la base de datos. Vea [.env.example][env]<https://github.com/diegoOpel/TrabajoFinalReactOpel/blob/main/.env.example>
-
+Se provee al usuario de este repositorio de un archivo de ejemplo con las variables a utilizar para correr la base de datos. Vea [.env.example][env]
 ## Autor del proyecto
 Diego Opel
 
